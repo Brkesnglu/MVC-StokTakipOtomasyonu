@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d67edc79ceb04c2ea70e8267e329b743" Name="Diagram1" >
+        <EntityTypeShape EntityType="VeritabanıEntities.TBLURUNLER" Width="1.5" PointX="3.875" PointY="0.5" />
+        <EntityTypeShape EntityType="VeritabanıEntities.TBLMUSTERILER" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VeritabanıEntities.TBLKATEGORILER" PointX="0.75" PointY="0.625" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeritabanıEntities.TBLSATISLAR" Width="1.5" PointX="3.875" PointY="2.875" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,35 @@
+﻿
+@using StokOtomasyonu.Models
+@model List<TBLSATISLAR>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Satis ID</th>
+        <th>Urun ID</th>
+        <th>Musteri ID</th>
+        <th>Urun Adet</th>
+        <th>Urun Fiyat</th>
+    </tr>
+    <tbody>
+        @foreach (var satis in Model)
+        {
+        <tr>
+            <td>@satis.SATISID</td>
+            <td>@satis.URUN</td>
+            <td>@satis.MUSTERI</td>
+            <td>@satis.ADET</td>
+            <td>@satis.FIYAT</td>
+        </tr>
+        }
+
+    </tbody>
+</table>
+<a href="/Satis/YeniSatis/" class="btn btn-primary">Yeni Satis Ekle</a>
+
+
+

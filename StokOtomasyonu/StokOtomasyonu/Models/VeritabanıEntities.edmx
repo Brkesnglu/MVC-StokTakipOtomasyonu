@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VeritabanıEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="VeritabanıEntitiesStoreContainer">
+    <EntitySet Name="TBLURUNLERSet" EntityType="VeritabanıEntities.Store.TBLURUNLERSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TBLMUSTERILERSet" EntityType="VeritabanıEntities.Store.TBLMUSTERILERSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TBLKATEGORILERSet" EntityType="VeritabanıEntities.Store.TBLKATEGORILERSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TBLSATISLARSet" EntityType="VeritabanıEntities.Store.TBLSATISLARSet" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="TBLURUNLERSet">
+    <Key>
+      <PropertyRef Name="URUNID" />
+    </Key>
+    <Property Name="URUNID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="URUNAD" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="URUNKATEGORI" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MARKA" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FIYAT" Type="decimal" Nullable="false" />
+    <Property Name="STOK" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBLMUSTERILERSet">
+    <Key>
+      <PropertyRef Name="MUSTERIID" />
+    </Key>
+    <Property Name="MUSTERIID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MUSTERIAD" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MUSTERISOYAD" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLKATEGORILERSet">
+    <Key>
+      <PropertyRef Name="KATEGORIID" />
+    </Key>
+    <Property Name="KATEGORIID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KATEGORIAD" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLSATISLARSet">
+    <Key>
+      <PropertyRef Name="SATISID" />
+    </Key>
+    <Property Name="SATISID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="URUN" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MUSTERI" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADET" Type="int" Nullable="false" />
+    <Property Name="FIYAT" Type="decimal" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="VeritabanıEntities" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="VeritabanıEntitiesContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBLURUNLERSet" EntityType="VeritabanıEntities.TBLURUNLER" />
+          <EntitySet Name="TBLMUSTERILERSet" EntityType="VeritabanıEntities.TBLMUSTERILER" />
+          <EntitySet Name="TBLKATEGORILERSet" EntityType="VeritabanıEntities.TBLKATEGORILER" />
+          <EntitySet Name="TBLSATISLARSet" EntityType="VeritabanıEntities.TBLSATISLAR" />
+        </EntityContainer>
+        <EntityType Name="TBLURUNLER">
+          <Key>
+            <PropertyRef Name="URUNID" />
+          </Key>
+          <Property Name="URUNID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="URUNAD" Type="String" Nullable="false" MaxLength="100" />
+          <Property Name="URUNKATEGORI" Type="String" Nullable="false" MaxLength="50" />
+          <Property Name="MARKA" Type="String" Nullable="false" MaxLength="50" />
+          <Property Name="FIYAT" Type="Decimal" Nullable="false" />
+          <Property Name="STOK" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBLMUSTERILER">
+          <Key>
+            <PropertyRef Name="MUSTERIID" />
+          </Key>
+          <Property Name="MUSTERIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MUSTERIAD" Type="String" Nullable="false" MaxLength="50" />
+          <Property Name="MUSTERISOYAD" Type="String" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLKATEGORILER">
+          <Key>
+            <PropertyRef Name="KATEGORIID" />
+          </Key>
+          <Property Name="KATEGORIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KATEGORIAD" Type="String" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLSATISLAR">
+          <Key>
+            <PropertyRef Name="SATISID" />
+          </Key>
+          <Property Name="SATISID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="URUN" Type="String" Nullable="false" MaxLength="50" />
+          <Property Name="MUSTERI" Type="String" Nullable="false" MaxLength="50" />
+          <Property Name="ADET" Type="Int32" Nullable="false" />
+          <Property Name="FIYAT" Type="Decimal" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VeritabanıEntitiesStoreContainer" CdmEntityContainer="VeritabanıEntitiesContainer">
+    <EntitySetMapping Name="TBLURUNLERSet">
+      <EntityTypeMapping TypeName="IsTypeOf(VeritabanıEntities.TBLURUNLER)">
+        <MappingFragment StoreEntitySet="TBLURUNLERSet">
+          <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+          <ScalarProperty Name="URUNAD" ColumnName="URUNAD" />
+          <ScalarProperty Name="URUNKATEGORI" ColumnName="URUNKATEGORI" />
+          <ScalarProperty Name="MARKA" ColumnName="MARKA" />
+          <ScalarProperty Name="FIYAT" ColumnName="FIYAT" />
+          <ScalarProperty Name="STOK" ColumnName="STOK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLMUSTERILERSet">
+      <EntityTypeMapping TypeName="IsTypeOf(VeritabanıEntities.TBLMUSTERILER)">
+        <MappingFragment StoreEntitySet="TBLMUSTERILERSet">
+          <ScalarProperty Name="MUSTERIID" ColumnName="MUSTERIID" />
+          <ScalarProperty Name="MUSTERIAD" ColumnName="MUSTERIAD" />
+          <ScalarProperty Name="MUSTERISOYAD" ColumnName="MUSTERISOYAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLKATEGORILERSet">
+      <EntityTypeMapping TypeName="IsTypeOf(VeritabanıEntities.TBLKATEGORILER)">
+        <MappingFragment StoreEntitySet="TBLKATEGORILERSet">
+          <ScalarProperty Name="KATEGORIID" ColumnName="KATEGORIID" />
+          <ScalarProperty Name="KATEGORIAD" ColumnName="KATEGORIAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLSATISLARSet">
+      <EntityTypeMapping TypeName="IsTypeOf(VeritabanıEntities.TBLSATISLAR)">
+        <MappingFragment StoreEntitySet="TBLSATISLARSet">
+          <ScalarProperty Name="SATISID" ColumnName="SATISID" />
+          <ScalarProperty Name="URUN" ColumnName="URUN" />
+          <ScalarProperty Name="MUSTERI" ColumnName="MUSTERI" />
+          <ScalarProperty Name="ADET" ColumnName="ADET" />
+          <ScalarProperty Name="FIYAT" ColumnName="FIYAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
